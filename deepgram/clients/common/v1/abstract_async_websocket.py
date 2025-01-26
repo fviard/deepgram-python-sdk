@@ -18,7 +18,7 @@ try:
     WS_ADDITIONAL_HEADERS_KEY = "additional_headers"
 except ImportError:
     # Backward compatibility with websockets versions 12
-    from websockets.legacy.client import (
+    from websockets.legacy.client import (  # type: ignore
         connect,
         WebSocketClientProtocol as ClientConnection,
     )
